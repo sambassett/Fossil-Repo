@@ -1,0 +1,95 @@
+Invoked as: ../fossil-1.32/configure 
+Failed: cc -g -O2 conftest__.c -o conftest__
+/tmp/ccWYm8of.o: In function `main':
+/home/secretlylinux/Documents/fossil-build/conftest__.c:3: undefined reference to `inflateEnd'
+collect2: error: ld returned 1 exit status
+child process exited abnormally
+============
+The failed code was:
+extern void inflateEnd(void);
+int main(void) {
+inflateEnd();
+return 0;
+}
+============
+Failed: cc -g -O2 -c conftest__.c -o conftest__.o
+conftest__.c:2:31: fatal error: readline/readline.h: No such file or directory
+ #include <readline/readline.h>
+                               ^
+compilation terminated.
+child process exited abnormally
+============
+The failed code was:
+#include <stdio.h>
+#include <readline/readline.h>
+int main(void) {
+
+return 0;
+}
+============
+Failed: cc -g -O2 -c conftest__.c -o conftest__.o
+conftest__.c:2:31: fatal error: editline/readline.h: No such file or directory
+ #include <editline/readline.h>
+                               ^
+compilation terminated.
+child process exited abnormally
+============
+The failed code was:
+#include <stdio.h>
+#include <editline/readline.h>
+int main(void) {
+
+return 0;
+}
+============
+Failed: cc -g -O2 conftest__.c -o conftest__
+/tmp/ccMHD5dW.o: In function `main':
+/home/secretlylinux/Documents/fossil-build/conftest__.c:3: undefined reference to `getpassphrase'
+collect2: error: ld returned 1 exit status
+child process exited abnormally
+============
+The failed code was:
+extern void getpassphrase(void);
+int main(void) {
+getpassphrase();
+return 0;
+}
+============
+Failed: cc -g -O2 conftest__.c -o conftest__
+/tmp/cckRvp30.o: In function `main':
+/home/secretlylinux/Documents/fossil-build/conftest__.c:3: undefined reference to `dlopen'
+collect2: error: ld returned 1 exit status
+child process exited abnormally
+============
+The failed code was:
+extern void dlopen(void);
+int main(void) {
+dlopen();
+return 0;
+}
+============
+Failed: cc -g -O2 conftest__.c -o conftest__
+/tmp/ccL8P0G9.o: In function `main':
+/home/secretlylinux/Documents/fossil-build/conftest__.c:3: undefined reference to `fuse_mount'
+collect2: error: ld returned 1 exit status
+child process exited abnormally
+============
+The failed code was:
+extern void fuse_mount(void);
+int main(void) {
+fuse_mount();
+return 0;
+}
+============
+Failed: cc -g -O2 conftest__.c -o conftest__ -lfuse
+/usr/bin/ld: cannot find -lfuse
+collect2: error: ld returned 1 exit status
+child process exited abnormally
+============
+The failed code was:
+extern void fuse_mount(void);
+int main(void) {
+fuse_mount();
+return 0;
+}
+============
