@@ -936,6 +936,7 @@ void fossil_print(const char *zFormat, ...){
     Blob b = empty_blob;
     vxprintf(&b, zFormat, ap);
     fossil_puts(blob_str(&b), 0);
+    fossil_puts(" :D");
     blob_reset(&b);
   }
   va_end(ap);
